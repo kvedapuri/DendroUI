@@ -1,0 +1,77 @@
+Your global Angular CLI version (15.2.5) is greater than your local version (14.2.10). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.55 MB |
+styles.css, styles.js | styles        | 391.30 kB |
+polyfills.js          | polyfills     | 318.01 kB |
+main.js               | main          | 190.84 kB |
+scripts.js            | scripts       |  20.25 kB |
+runtime.js            | runtime       |   6.52 kB |
+
+| Initial Total |   3.46 MB
+
+Build at: 2023-04-06T16:46:58.812Z - Hash: 1a547fc3905da164 - Time: 15659ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✔ Compiled successfully.
+Your global Angular CLI version (15.2.5) is greater than your local version (14.2.10). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.55 MB |
+styles.css, styles.js | styles        | 391.30 kB |
+polyfills.js          | polyfills     | 318.01 kB |
+main.js               | main          | 190.84 kB |
+scripts.js            | scripts       |  20.25 kB |
+runtime.js            | runtime       |   6.52 kB |
+
+| Initial Total |   3.46 MB
+
+Build at: 2023-04-06T17:01:37.191Z - Hash: 1a547fc3905da164 - Time: 14882ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+<e> [webpack-dev-middleware] HookWebpackError: Cannot find package 'globby' imported from /home/vkarthi/DendroStockUI-main/node_modules/copy-webpack-plugin/dist/index.js
+<e>     at makeWebpackError (/home/vkarthi/DendroStockUI-main/node_modules/webpack/lib/HookWebpackError.js:48:9)
+<e>     at /home/vkarthi/DendroStockUI-main/node_modules/webpack/lib/Compilation.js:3060:12
+<e>     at eval (eval at create (/home/vkarthi/DendroStockUI-main/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:91:1)
+<e>     at /home/vkarthi/DendroStockUI-main/node_modules/webpack/lib/Compilation.js:510:26
+<e>     at /home/vkarthi/DendroStockUI-main/node_modules/copy-webpack-plugin/dist/index.js:710:13
+<e>     at runMicrotasks (<anonymous>)
+<e>     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+<e> -- inner error --
+<e> Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'globby' imported from /home/vkarthi/DendroStockUI-main/node_modules/copy-webpack-plugin/dist/index.js
+<e>     at new NodeError (internal/errors.js:322:7)
+<e>     at packageResolve (internal/modules/esm/resolve.js:732:9)
+<e>     at moduleResolve (internal/modules/esm/resolve.js:773:18)
+<e>     at Loader.defaultResolve [as _resolve] (internal/modules/esm/resolve.js:887:11)
+<e>     at Loader.resolve (internal/modules/esm/loader.js:89:40)
+<e>     at Loader.getModuleJob (internal/modules/esm/loader.js:242:28)
+<e>     at Loader.import (internal/modules/esm/loader.js:177:28)
+<e>     at importModuleDynamically (internal/modules/cjs/loader.js:1056:27)
+<e>     at exports.importModuleDynamicallyCallback (internal/process/esm_loader.js:30:14)
+<e>     at /home/vkarthi/DendroStockUI-main/node_modules/copy-webpack-plugin/dist/index.js:706:13
+<e> caused by plugins in Compilation.hooks.processAssets
+<e> Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'globby' imported from /home/vkarthi/DendroStockUI-main/node_modules/copy-webpack-plugin/dist/index.js
+<e>     at new NodeError (internal/errors.js:322:7)
+<e>     at packageResolve (internal/modules/esm/resolve.js:732:9)
+<e>     at moduleResolve (internal/modules/esm/resolve.js:773:18)
+<e>     at Loader.defaultResolve [as _resolve] (internal/modules/esm/resolve.js:887:11)
+<e>     at Loader.resolve (internal/modules/esm/loader.js:89:40)
+<e>     at Loader.getModuleJob (internal/modules/esm/loader.js:242:28)
+<e>     at Loader.import (internal/modules/esm/loader.js:177:28)
+<e>     at importModuleDynamically (internal/modules/cjs/loader.js:1056:27)
+<e>     at exports.importModuleDynamicallyCallback (internal/process/esm_loader.js:30:14)
+<e>     at /home/vkarthi/DendroStockUI-main/node_modules/copy-webpack-plugin/dist/index.js:706:13

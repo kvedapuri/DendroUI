@@ -1,0 +1,125 @@
+<div *ngIf="viewMode; else editable">
+    <div *ngIf="currentPlant.id">
+      <h4>Plant</h4>
+      <div>
+        <label><strong>Name:</strong></label> {{ currentPlant.title }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentPlant.description }}
+      </div>
+      <div>
+        <label><strong>Type:</strong></label>
+        {{ currentPlant.type }}
+      </div>
+      <div>
+        <label><strong>Price:</strong></label>
+        $ {{ currentPlant.price }}
+      </div>
+      <div>
+        <label><strong>Status:</strong></label>
+        {{ currentPlant.published ? "Available" : "No Stock" }}
+      </div>
+  
+      <a
+        class="badge badge-warning" *ngIf="showAdminBoard"
+        routerLink="/plants/{{ currentPlant.id }}"
+      >
+        Edit
+      </a>
+    </div>
+  
+    <div *ngIf="!currentPlant">
+      <br />
+      <p>Please click on a Plant...</p>
+    </div>
+  </div>
+  
+  <ng-template #editable >
+    <div *ngIf="currentPlant.id" style="padding-top:5%" class="edit-form">
+      <h4>Plant</h4>
+      <form>
+        <div class="form-group">
+          <label for="title">Name of Plant</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            [(ngModel)]="currentPlant.title"
+            name="title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="currentPlant.description"
+            name="description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="type">Type of Plant</label>
+          <input
+            type="text"
+            class="form-control"
+            id="type"
+            [(ngModel)]="currentPlant.type"
+            name="type"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            [(ngModel)]="currentPlant.price"
+            name="price"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label><strong>Status:</strong></label>
+          {{ currentPlant.published ? "Available" : "No Stock" }}
+        </div>
+      </form>
+  
+      <button
+        class="badge badge-primary mr-2"
+        *ngIf="currentPlant.published"
+        (click)="updatePublished(false)"
+      >
+        Update Status to Not-Available
+      </button>
+      <button
+        *ngIf="!currentPlant.published"
+        class="badge badge-primary mr-2"
+        (click)="updatePublished(true)"
+      >
+        Update Status Available
+      </button>
+  
+      <button *ngIf="showAdminBoard" class="badge badge-danger mr-2" (click)="deletePlant()">
+        Delete
+      </button>
+  
+      <button
+      *ngIf="showAdminBoard"
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updatePlant()"
+      >
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentPlant.id">
+      <br />
+      <p>Cannot access this Plant...</p>
+    </div>
+  </ng-template>

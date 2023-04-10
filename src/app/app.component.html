@@ -1,0 +1,45 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="logo">
+      <img src="./assets/images/plantlogo.png" alt="Logo ">
+      <h1><span>Dendro</span>Stock</h1>
+    </div>
+  
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a style="font-family:verdana; color:white" class="nav-link" routerLink="aboutus" href="/aboutus"><b>About us</b></a>
+      </li>
+      <li class="nav-item">
+        <a style="font-family:verdana; color:white" class="nav-link" routerLink="contactus" href="/contactus"><b>Contact us</b></a>
+      </li>
+      <li class="nav-item">
+        <a href="/register" style="font-family:verdana; color:white" class="nav-link" routerLink="register"><b>Register</b></a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" style="font-family:verdana; color:white"  class="nav-link" routerLink="login"><b>Login</b></a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/home"  style="font-family:verdana; color:white" class="nav-link" routerLink="home"><b>Home </b></a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="plants" style="font-family:verdana; color:white" class="nav-link"><b>Plants</b></a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a routerLink="add" style="font-family:verdana; color:white" class="nav-link"><b>Add</b></a>
+      </li>
+      <li class="nav-item">
+        <a href="/profile" style="font-family:verdana; color:white" class="nav-link" routerLink="profile"><b>Profile</b></a>
+      </li>
+      <li class="nav-item">
+        <a href="/login"  style="font-family:verdana; color:white" class="nav-link" routerLink="login" (click)="logout()"><b>Logout</b></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

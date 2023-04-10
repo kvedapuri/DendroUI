@@ -1,0 +1,143 @@
+.navigation{
+	width:  1300px;
+	height: 120px ;
+}
+header{
+	background: linear-gradient(rgba(0.2,0,0,0),rgba(0.5,0.5,0.5,0.5)),url("src/assets/images/background5.jpg");
+	height: 100vh;
+	background-size: cover;
+background-color: rgba(0, 0, 0, 0.4);
+ height: 100%;
+ min-height: 100%;
+}
+header .img{
+	opacity: 2.5;
+}
+
+
+.logo img{
+	width: 70px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.logo h1{
+	width: 100px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 15px;
+	font-size: 40px;
+	color:#fff;
+	text-shadow: 3px 3px #333;
+}
+.logo span{
+	color:#8FBC8F;
+	text-shadow: 3px 3px #333;
+}
+.navi{
+	float: right;
+	margin-top: 30px;
+	 list-style: none;
+	 font-family: verdana;
+} 
+.navi li{
+	display: inline-block;
+	font-family: verdana;
+}
+.navi li a{
+	font-family: verdana;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: none;
+	font-size: 14px;
+} 
+.navi li a:hover{
+	border-radius: 5px;
+	background: #fff;
+	color: #333;
+}
+.service-menu
+{
+	display:none;
+}
+.navi li:hover .service-menu{
+	display:block;
+	position: absolute;
+	align-content: center;
+	background: rgb(180,180,180);
+}
+.navi li:hover .service-menu ul li{
+	display: block;
+	margin:10px;
+	margin-top: 5px;
+}
+
+/* styling of text on the image(center of page)*/
+
+
+.welcome-text{
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	margin: 10% 25%;
+	text-align: center; 
+
+}
+.welcome-text h1{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+.welcome-text a{
+	border-style: solid;
+    border-width: small;
+	padding: 10px 25px;
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	font-size: 20px;
+	margin-top:0px;
+	display: inline-block;
+	color:#fff;
+}
+
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/*footer styling: when including nav&fotter style sheet even the navigation styling is being changed, so includedit here aswell.*/
+.footer{
+	background:#333;
+	color: #e6ffff;
+	height: 200px;
+	position: relative;
+	display: flex;
+}
+.footer h4{
+	color: #fff;
+	font-size:20px;
+}
+
+.footer .footer-content{
+	hieght:250px;
+	flex: 0.8;
+	border: 1px soild;
+	margin: 10px;
+}
+
+
+.footer .footer-content .socials a{
+	border: 1px solid ;
+	width: 45px;
+	height: 41px;
+	padding-top:5px;
+	margin-right:5px;
+	text-align: center;
+	display: inline-block;
+	font-size: 1.3em;
+	border-radius: 5px;
+	color: #fff;
+}
+

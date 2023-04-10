@@ -1,0 +1,55 @@
+<div style="padding-top:5%">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Plant Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="plant.title"
+            name="title"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="plant.description"
+            name="description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Type of Plant</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="plant.type"
+            name="description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Price</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="plant.price"
+            name="description"
+          />
+        </div>
+  
+        <button (click)="savePlant()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Plant Details submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newPlant()">Add</button>
+      </div>
+    </div>
+  </div>
